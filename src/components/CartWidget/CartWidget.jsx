@@ -4,8 +4,12 @@ import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
   const { cartItems } = useContext(CartContext);
+  const totalQuantity = cartItems.reduce(
+    (accumulator, item) => accumulator + item.quantity,
+    0
+  );
   return (
-    <div><ShoppingCartIcon />{cartItems.length} </div>
+    <div><ShoppingCartIcon />{totalQuantity} </div>
   
   )
 }

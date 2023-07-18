@@ -20,7 +20,7 @@ const CartPage = () => {
     setCartItems([]);
     console.log(cartItems);
   };
-
+  
   const [values, setValue] = useState(initialState);
   const [purchaseID, setPurchaseID] = useState(null);
 
