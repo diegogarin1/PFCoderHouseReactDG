@@ -61,20 +61,20 @@ const CartPage = () => {
                 <th>Subtotal</th>
               </tr>
               </thead>
-
+              <tbody>
               {cartFinal.map((item) => (
-                <tbody>
+                
                 <tr key={item.id}>
                   <td>{item.name}</td>
                   <td>{item.quantity}</td>
                   <td>${item.price}</td>
                   <td>${item.price * item.quantity}</td>
                 </tr>
-                <tr>The total price is $ {totalPrice} </tr>
-                </tbody>
+                
 
               ))}
-              
+              <tr>The total price is $ {totalPrice} </tr>
+                </tbody>
               </table>
               <form onSubmit={onSubmit}>
         <div className="container-fluid shadow-lg p-3 mb-5 bg-body-tertiary rounded">
