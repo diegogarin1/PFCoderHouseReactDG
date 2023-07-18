@@ -1,0 +1,8 @@
+.navbar{
+    color: antiquewhite;
+}
+.navbarContainer{
+    display: flex;
+    justify-content: space-around;
+    color: antiquewhite;
+}

@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2em;
+    background-color: rgb(192, 228, 239);
+}
+
+.logo {
+    width: 10em;
+}
