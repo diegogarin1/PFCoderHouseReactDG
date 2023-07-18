@@ -29,7 +29,10 @@ const CartPage = () => {
     const { value, name } = e.target;
     setValue({ ...values, [name]: value });
   };
-
+  const totalPrice = cartFinal.reduce(
+    (accumulator, item) => accumulator + item.price * item.quantity,
+    0
+  );
   const onSubmit = async (e) => {
     e.preventDefault();
     const docRef = await addDoc(collection(db, "purchases"), {
@@ -67,6 +70,7 @@ const CartPage = () => {
                   <td>${item.price}</td>
                   <td>${item.price * item.quantity}</td>
                 </tr>
+                <tr>The total price is $ {totalPrice} </tr>
                 </tbody>
 
               ))}
